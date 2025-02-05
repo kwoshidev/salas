@@ -34,6 +34,7 @@ p {
 }
 
 
+
 /* homepage start */
 
 .home-movie-list {
@@ -182,47 +183,105 @@ marquee {
 
 /*  Sidebar Style End */
 
-        .con2 {
-            position: relative;
-            display: inline-block;
-        }
+.con2 {
+    position: relative;
+    display: inline-block;
+}
 
-        #videoContainer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.9); /* Dark overlay */
-            display: none; /* Hide the container by default */
-            align-items: center;
-            justify-content: center;
-            z-index: 100;
-        }
-        
+#videoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    display: none; /* Hide the container by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
 
-        #exitBtn {
-            z-index: 1000;
-        }
 
-        #videoPlayer {
-            width: 100%;   /* Adjust to control video width */
-            max-width: 80;
-            height: 100vh;   /* Maintain aspect ratio */
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
+#exitBtn {
+    z-index: 1000;
+}
 
-        }
+#videoPlayer {
+    width: 100%;   /* Adjust to control video width */
+    max-width: 80;
+    height: 100vh;   /* Maintain aspect ratio */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-        #exitBtn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+}
+
+#exitBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* mobile responsive */
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
+  .home-movie-list {
+    display: block;
+    margin-left: 28%;
+  }
+
+  #movie-picture {
+    width: 100% !important;
+    padding: 15px !important;
+    margin: 0px !important;
+    box-sizing: border-box;
+  }
+
+  #webtitle h2 {
+    display: none !important;
+    visibility:hidden !important;
+  }
+
+  .sidebar li {
+    font-size: 13px !important;
+    text-align: start !important;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+
+  .sidebar li {
+   margin-left: -50px;
+   font-size: 10px;
+  }
+
+  .sidebar h4 {
+    font-size: 10px !important;
+    margin-left: -40px;
+  }
+
+  .sidebar {
+    padding: 20px !important;
+    width: 20%;
+  }
+  
+  a {
+    padding: 0px !important;
+    align-items: start !important;
+    justify-content: flex-start !important;
+    text-align: start !important;
+    margin-left: -15px;
+  }
+
+  .sidebar li, h4 {
+    margin-left: -40px;
+  }
+
+
+}
