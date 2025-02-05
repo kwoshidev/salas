@@ -6,8 +6,11 @@
     height: auto !important;
 }
 
+
 #body-container {
-    background-color: black;
+    background-image: url(../picture/backcgound-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 * {
@@ -46,9 +49,19 @@ p {
   width: 90% !important;
   padding: 0px !important;
   margin: 0px !important;
-  box-sizing: border-box;
+  box-shadow: rgba(182, 181, 181, 0.35) 0px 5px 15px !important;
 }
 
+.text-and-buttons-container {
+  margin-top: 80px;
+}
+
+.text-and-buttons-container h1 {
+  text-align: start;
+  margin-left: 20%;
+  margin-bottom: 20px;
+  color: red;
+}
 /* homepage end */
 
 .con1 {
@@ -82,6 +95,20 @@ marquee {
 
 /*  Sidebar Style Start */
 
+.sidebar-header {
+  height: auto;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0px !important;
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+.sidebar-header #logo {
+  width: 100%;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -94,6 +121,7 @@ marquee {
     background: #161a2d;
     padding: 25px 20px;
     transition: all 0.4s ease;
+    opacity: 0.9;
   }
 
   .sidebar .sidebar-header {
@@ -234,7 +262,7 @@ marquee {
 
   .home-movie-list {
     display: block;
-    margin-left: 28%;
+    margin-left: 0%;
   }
 
   #movie-picture {
@@ -244,44 +272,9 @@ marquee {
     box-sizing: border-box;
   }
 
-  #webtitle h2 {
-    display: none !important;
-    visibility:hidden !important;
-  }
-
-  .sidebar li {
-    font-size: 13px !important;
-    text-align: start !important;
-    padding: 0px;
-    overflow-x: hidden;
-  }
-
-  .sidebar li {
-   margin-left: -50px;
-   font-size: 10px;
-  }
-
-  .sidebar h4 {
-    font-size: 10px !important;
-    margin-left: -40px;
-  }
-
   .sidebar {
-    padding: 20px !important;
-    width: 20%;
+    display: none !important;
+    visibility:  hidden !important;
   }
-  
-  a {
-    padding: 0px !important;
-    align-items: start !important;
-    justify-content: flex-start !important;
-    text-align: start !important;
-    margin-left: -15px;
-  }
-
-  .sidebar li, h4 {
-    margin-left: -40px;
-  }
-
 
 }
