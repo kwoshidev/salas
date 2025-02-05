@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7eded;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #e6005c;
+        }
+        .invitation-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        .button-group {
+            margin-top: 20px;
+        }
+        .button-group button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-group button:hover {
+            background-color: #e6005c;
+            color: #fff;
+        }
+        .response-message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>My Love, Happy Valentine's Day,</h1>
+        <div class="invitation-card">
+            <p>As Valentine's Day approaches, I want to take this opportunity to express my deepest affection for you and to invite you to a special celebration.</p>
+            <p>  Let's create memories and beutiful moments that will last a lifetime.</p>
+            <p>Ika'y Aking Mahal!</p>
+            <p>With all my love,</p>
+            <p>kikay mabaho it kipay</p>
+            <div class="button-group">
+                <button onclick="respond('Yes')">Yes</button>
+                <button onclick="respond('No')">No</button>
+            </div>
+            <div class="response-message" id="responseMessage"></div>
+        </div>
+    </div>
+    <script>
+        function respond(response) {
+            var messageElement = document.getElementById("responseMessage");
+            if (response === 'Yes') {
+                messageElement.textContent = "Mararaming Salamat sa Imong Tanan, Sana'y Maging Masaya Ang Ating Date!!";
+            } else if (response === 'No') {
+                messageElement.textContent = "Yes? That's Great!";
+            }
+        }
+    </script>
+</body>
+</html>
