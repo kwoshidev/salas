@@ -20,3 +20,22 @@ exitBtn.addEventListener("click", function () {
     videoPlayer.pause();  // Pause the video
     videoPlayer.currentTime = 0;  // Reset the video to the start
 });
+
+
+// filters movies using button in homepage
+const filterButtons = document.querySelectorAll('.filter-button');
+const movieImages = document.querySelectorAll('.movie-picture');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const genre = button.getAttribute('data-genre');
+
+        movieImages.forEach(image => {
+            if (genre === 'all' || image.getAttribute('data-genre') === genre) {
+                image.parentElement.style.display = 'flex'; // Display inline-flex for better alignment
+            } else {
+                image.parentElement.style.display = 'none';
+            }
+        });
+    });
+});

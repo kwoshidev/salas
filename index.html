@@ -11,7 +11,7 @@
 
     <marquee behavior="" direction="right">
         <center>
-            <h1>THIS MY FIRST AND LAST PROJECT</h1>
+            <h1>THIS MY FIRST PROJECT</h1>
         </center>
     </marquee>
 
@@ -74,19 +74,46 @@
       </aside>
 
       <div class="text-and-buttons-container">
-          <h1>TRENDING</h1>
-      </div>
+        <h1>TRENDING</h1>
+        <div class="filter-buttons">
+            <button class="filter-button" data-genre="all">All</button>
+            <button class="filter-button" data-genre="fantasy">Fantasy</button>
+            <button class="filter-button" data-genre="action">Action</button>
+            <button class="filter-button" data-genre="romance">SCIENCE-FICTION</button>
+        </div>
+    </div>
+    
+    <div class="movielist-filter-container">
       <div class="home-movie-list">
-        <div>
-          <img id="movie-picture" src="./picture/back.png" alt="Thumbnail">
-        </div>
-        <div>
-          <img id="movie-picture" src="./picture/back.png" alt="Thumbnail">     
-        </div>
-        <div>
-          <img id="movie-picture" src="./picture/back.png" alt="Thumbnail">
-        </div>
+          <div><img class="movie-picture" src="./picture/mortal.png" alt="Thumbnail" data-genre="fantasy"></div>
+          <div><img class="movie-picture" src="./picture/rigde.png" alt="Thumbnail" data-genre="action"></div>
+          <div><img class="movie-picture" src="./picture/rim.png" alt="Thumbnail" data-genre="romance"></div>
+          <div><img class="movie-picture" src="./picture/knight.png" alt="Thumbnail" data-genre="fantasy"></div>
+          <div><img class="movie-picture" src="./picture/back.png" alt="Thumbnail" data-genre="action"></div>
+          <div><img class="movie-picture" src="./picture/arrival.png" alt="Thumbnail" data-genre="romance"></div>
+          <div><img class="movie-picture" src="./picture/red.png" alt="Thumbnail" data-genre="fantasy"></div>
+          <div><img class="movie-picture" src="./picture/war.png" alt="Thumbnail" data-genre="action"></div>
+          <div><img class="movie-picture" src="./picture/man.png" alt="Thumbnail" data-genre="romance"></div>
       </div>
+    </div>
+    
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const movieImages = document.querySelectorAll('.movie-picture');
 
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const genre = button.getAttribute('data-genre');
+
+            movieImages.forEach(image => {
+                if (genre === 'all' || image.getAttribute('data-genre') === genre) {
+                    image.parentElement.style.display = 'flex'; /* Keeps images inline */
+                } else {
+                    image.parentElement.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
