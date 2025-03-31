@@ -8,11 +8,7 @@
 
 
 #body-container {
-    background-image: url(../picture/backcgound-image.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100% !important;
-    height: auto !important;
+    background-image: url(../picture/backcgound-image.jpg) !important;
 }
 
 * {
@@ -42,15 +38,16 @@ p {
 
 /* homepage start */
 
+/*
 .home-movie-list {
   display: flex;
   margin-left: 20%;
 }
 
 .movie-picture {
-  width: 80%; /* Fixed width */
-  height: 500px; /* Fixed height */
-  object-fit: cover; /* Ensures images fit without distortion */
+  width: 80%;
+  height: 500px;
+  object-fit: cover; 
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
 }
@@ -80,7 +77,6 @@ p {
   text-align: center;
   margin-bottom: 20px;
 }
-
 /* homepage end */
 
 .con1 {
@@ -303,72 +299,279 @@ marquee {
 .text-and-buttons-container {
             text-align: center;
             margin-bottom: 20px;
+            margin-top: 5% !important;
+            margin-left: -16% !important;
         }
 
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
+  .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+  }
 
-        .filter-button {
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-        }
+  .filter-button {
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+  }
 
-        .filter-button:hover {
-            background-color: #0056b3;
-        }
+  .filter-button:hover {
+      background-color: #0056b3;
+  }
 
-        /* 🎥 Responsive Movie List */
-        .movielist-filter-container {
-          display: flex;
-          justify-content: center;
-          margin-top: 20px;
-      }
+  /* 🎥 Responsive Movie List */
+  .movielist-filter-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
-      .home-movie-list {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive Grid */
-          gap: 15px;
-          width: 90%;
-          max-width: 1000px;
-      }
+.home-movie-list {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: -20px !important;
+    display: grid !important;
+    grid-template-columns: 200px 200px 200px !important; /* Three columns with fixed width */
+    gap: 120px !important; /* Space between grid items */
 
-      .home-movie-list div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+}
 
-      .movie-picture {
-          width: 100%;
-          max-width: 200px; /* Ensures consistency */
-          height: 280px;
-          object-fit: cover;
-          border-radius: 8px;
-          transition: transform 0.3s ease-in-out;
-      }
+.home-movie-list div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px !important;
+    padding: 0px !important;
+    margin-bottom: -80% !important;
+}
 
-      .movie-picture:hover {
-          transform: scale(1.1);
-      }
+.movie-picture {
+  width: 300px !important;
+  height: auto !important;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: 1px solid #000;
+}
 
-      /* 📱 Mobile Optimization */
-      @media (max-width: 768px) {
-          .home-movie-list {
-              grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-          }
-      }
+.movie-picture:hover {
+    transform: scale(1.1);
+}
 
-      @media (max-width: 480px) {
-          .home-movie-list {
-              grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
-          }
-      }
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+    .home-movie-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-movie-list {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
+    }
+}
+
+
+/* CSS */
+.filter-button {
+  appearance: button;
+  background-color: #a52a2a;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.filter-button:focus {
+  text-decoration: none;
+}
+
+.filter-button:hover {
+  text-decoration: none;
+  background-color: #000;
+}
+
+.filter-button:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.filter-button:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .filter-button {
+    padding: 12px 50px;
+  }
+}
+
+
+.text-and-buttons-container {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+
+/* card hover style */
+
+.movie-card {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.movie-card:hover {
+  transform: scale(0.9);
+  z-index: 10;
+}
+
+.movie-picture {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movie-info-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.movie-card:hover .movie-info-container {
+  opacity: 1;
+  height: 380px !important;
+  background-color: #000 !important;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  bottom: 100% !important;
+  object-fit: cover !important;
+}
+
+.movie-info {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  bottom: -10% !important;
+}
+
+#videoPlayer-home {
+  padding-bottom: 200px !important;
+}
+
+
+
+/* Table and low reso laptop responsive start */
+
+@media screen and (min-width: 768px) and (max-width: 1600px) {
+  .text-and-buttons-container {  /* homepage filter buttons  */
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 5% !important;
+    margin-left: 15% !important;
+  }
+
+  .home-movie-list { /* homepage card  */
+    margin-left: 20% !important;
+    width: 90%;
+    max-width: 1000px;
+    margin-top: -20px !important;
+    display: grid !important;
+    grid-template-columns: 200px 200px !important; /* Three columns with fixed width */
+    gap: 120px !important; /* Space between grid items */
+
+}
+
+
+}
+
+
+@media screen and (min-width: 1220px) and (max-width: 1600px) {
+  .text-and-buttons-container {  /* homepage filter buttons  */
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 5% !important;
+    margin-left: 15% !important;
+  }
+
+  .home-movie-list { /* homepage card  */
+    margin-left: 20% !important;
+    width: 90%;
+    max-width: 1000px;
+    margin-top: -20px !important;
+    display: grid !important;
+    grid-template-columns: 200px 200px 200px !important; /* Three columns with fixed width */
+    gap: 120px !important; /* Space between grid items */
+
+}
+
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .text-and-buttons-container {  /* homepage filter buttons  */
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 5% !important;
+    margin-left: 15% !important;
+  }
+
+  .home-movie-list { /* homepage card  */
+    margin-left: 0% !important;
+    width: 90%;
+    max-width: 1000px;
+    margin-top: -20px !important;
+    display: grid !important;
+    grid-template-columns: 200px !important; /* Three columns with fixed width */
+    gap: 120px !important; /* Space between grid items */
+
+}
+
+
+}
+
+/* Table and low reso laptop responsive end */
